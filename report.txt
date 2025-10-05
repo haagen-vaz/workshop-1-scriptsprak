@@ -1,0 +1,50 @@
+
+Huvudkontor
+  SW-CORE-01  |  Status: online  |  Uptime: 145 dagar
+  SW-CORE-02  |  Status: online  |  Uptime: 145 dagar
+  SW-DIST-01  |  Status: online  |  Uptime: 89 dagar
+  SW-DIST-02  |  Status: online  |  Uptime: 89 dagar
+  SW-ACCESS-03  |  Status: offline  |  Uptime: 0 dagar
+  SW-ACCESS-04  |  Status: online  |  Uptime: 234 dagar
+  SW-ACCESS-05  |  Status: online  |  Uptime: 15 dagar
+  RT-EDGE-01  |  Status: online  |  Uptime: 234 dagar
+  RT-EDGE-02  |  Status: online  |  Uptime: 234 dagar
+  AP-FLOOR1-01  |  Status: online  |  Uptime: 67 dagar
+  AP-FLOOR1-02  |  Status: online  |  Uptime: 67 dagar
+  AP-FLOOR2-01  |  Status: online  |  Uptime: 12 dagar
+  AP-FLOOR2-02  |  Status: warning  |  Uptime: 2 dagar
+  AP-FLOOR3-01  |  Status: online  |  Uptime: 156 dagar
+  FW-DMZ-01  |  Status: online  |  Uptime: 89 dagar
+
+Lager
+  SW-LAGER-01  |  Status: online  |  Uptime: 456 dagar
+  SW-LAGER-02  |  Status: online  |  Uptime: 23 dagar
+  RT-LAGER-01  |  Status: warning  |  Uptime: 2 dagar
+  AP-LAGER-01  |  Status: online  |  Uptime: 67 dagar
+  AP-LAGER-02  |  Status: offline  |  Uptime: 0 dagar
+
+Kontor Malmö
+  SW-MAL-CORE-01  |  Status: online  |  Uptime: 367 dagar
+  SW-MAL-ACC-01  |  Status: online  |  Uptime: 45 dagar
+  SW-MAL-ACC-02  |  Status: online  |  Uptime: 8 dagar
+  RT-MAL-01  |  Status: online  |  Uptime: 178 dagar
+  AP-MAL-01  |  Status: online  |  Uptime: 90 dagar
+  AP-MAL-02  |  Status: online  |  Uptime: 90 dagar
+  FW-MAL-01  |  Status: online  |  Uptime: 234 dagar
+
+Datacenter
+  SW-DC-CORE-01  |  Status: online  |  Uptime: 789 dagar
+  SW-DC-CORE-02  |  Status: online  |  Uptime: 789 dagar
+  SW-DC-TOR-01  |  Status: online  |  Uptime: 234 dagar
+  SW-DC-TOR-02  |  Status: warning  |  Uptime: 5 dagar
+  SW-DC-TOR-03  |  Status: online  |  Uptime: 156 dagar
+  RT-DC-EDGE-01  |  Status: online  |  Uptime: 567 dagar
+  FW-DC-01  |  Status: online  |  Uptime: 445 dagar
+  FW-DC-02  |  Status: online  |  Uptime: 445 dagar
+  LB-DC-01  |  Status: online  |  Uptime: 234 dagar
+  LB-DC-02  |  Status: online  |  Uptime: 234 dagar
+
+Säkerhetskopia
+  SW-DR-01  |  Status: online  |  Uptime: 890 dagar
+  RT-DR-01  |  Status: online  |  Uptime: 890 dagar
+  FW-DR-01  |  Status: online  |  Uptime: 345 dagar
