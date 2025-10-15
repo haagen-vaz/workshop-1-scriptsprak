@@ -3,7 +3,6 @@ import json
 # --- Konfiguration ---
 UPTIME_THRESHOLD_DAYS = 30
 
-
 # Läs JSON
 data = json.load(open("network.devices.json", "r", encoding="utf-8"))
 
