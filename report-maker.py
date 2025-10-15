@@ -100,14 +100,14 @@ for location in data["locations"]:
             switch_usage.append((hostname, site_name, used, total, pct))
 
 
-        # VLAN (antas vara heltal eller strängar som kan konverteras)
+        # VLAN heltal eller strängar som kan konverteras
         for v in device.get("vlans", []):
             vlan_set.add(int(v))
 
 
 
 
-# --- OFFLINE ---
+# OFFLINE
 report += "\nEnheter med status OFFLINE\n"
 report += "--------------------------\n"
 if offline_list:
@@ -116,7 +116,7 @@ if offline_list:
 else:
     report += "Inga.\n"
 
-# --- WARNING ---
+#WARNING
 report += "\nEnheter med status WARNING\n"
 report += "--------------------------\n"
 if warning_list:
@@ -125,7 +125,7 @@ if warning_list:
 else:
     report += "Inga.\n"
 
-# --- Låg uptime ---
+#Låg uptime
 report += f"\nEnheter med mindre än {UPTIME_THRESHOLD_DAYS} dagars uptime\n"
 report += "---------------------------------------------\n"
 if low_uptime_list:
@@ -134,7 +134,7 @@ if low_uptime_list:
         report += f"- {hostname:<15} {site_name:<12}  {dtype:<12}  {int(uptime):>3} dagar\n"
 
 
-# --- Switchport-användning per switch ---
+# Switchport-användning per switch
 report += "\nSwitchport-användning per switch\n"
 report += "--------------------------------\n"
 
@@ -150,7 +150,7 @@ for hostname, site_name, used, total, pct in switch_usage:
 
 
 
-# Översikt per lokation ---
+# Översikt per lokation
 report += "\nÖversikt per lokation (total/online/offline/warning)\n"
 report += "-----------------------------------------------------\n"
 report += "Lokation                Totalt  Online  Offline  Warning\n"
