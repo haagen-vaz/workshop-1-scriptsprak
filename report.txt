@@ -1,50 +1,132 @@
+Summary
+-----------------
+Företag: TechCorp AB
+Senast uppdaterad: 2024-09-30T10:30:00
+Totalt antal enheter: 40
+Offline: 2  |  Warning: 3  |  Låg uptime (<30 d): 9
+Switch-portar: 541/676 i bruk (80%)
+Unika VLAN: 19
 
-Huvudkontor
-  SW-CORE-01  |  Status: online  |  Uptime: 145 dagar
-  SW-CORE-02  |  Status: online  |  Uptime: 145 dagar
-  SW-DIST-01  |  Status: online  |  Uptime: 89 dagar
-  SW-DIST-02  |  Status: online  |  Uptime: 89 dagar
-  SW-ACCESS-03  |  Status: offline  |  Uptime: 0 dagar
-  SW-ACCESS-04  |  Status: online  |  Uptime: 234 dagar
-  SW-ACCESS-05  |  Status: online  |  Uptime: 15 dagar
-  RT-EDGE-01  |  Status: online  |  Uptime: 234 dagar
-  RT-EDGE-02  |  Status: online  |  Uptime: 234 dagar
-  AP-FLOOR1-01  |  Status: online  |  Uptime: 67 dagar
-  AP-FLOOR1-02  |  Status: online  |  Uptime: 67 dagar
-  AP-FLOOR2-01  |  Status: online  |  Uptime: 12 dagar
-  AP-FLOOR2-02  |  Status: warning  |  Uptime: 2 dagar
-  AP-FLOOR3-01  |  Status: online  |  Uptime: 156 dagar
-  FW-DMZ-01  |  Status: online  |  Uptime: 89 dagar
+VLAN-lista: 10, 20, 30, 40, 50, 100, 110, 120, 200, 300, 400, 500, 600, 700, 800, 900, 1000, 2000, 2100
 
-Lager
-  SW-LAGER-01  |  Status: online  |  Uptime: 456 dagar
-  SW-LAGER-02  |  Status: online  |  Uptime: 23 dagar
-  RT-LAGER-01  |  Status: warning  |  Uptime: 2 dagar
-  AP-LAGER-01  |  Status: online  |  Uptime: 67 dagar
-  AP-LAGER-02  |  Status: offline  |  Uptime: 0 dagar
 
-Kontor Malmö
-  SW-MAL-CORE-01  |  Status: online  |  Uptime: 367 dagar
-  SW-MAL-ACC-01  |  Status: online  |  Uptime: 45 dagar
-  SW-MAL-ACC-02  |  Status: online  |  Uptime: 8 dagar
-  RT-MAL-01  |  Status: online  |  Uptime: 178 dagar
-  AP-MAL-01  |  Status: online  |  Uptime: 90 dagar
-  AP-MAL-02  |  Status: online  |  Uptime: 90 dagar
-  FW-MAL-01  |  Status: online  |  Uptime: 234 dagar
+Huvudkontor — 15 enheter (Online: 13, Offline: 1, Warning: 1, 87% online)
+---------------------------------------------------------------------------
+Hostname          Typ               Status    Uptime (dagar)
+-------------------------------------------------------
+SW-ACCESS-03      switch            offline       0
+AP-FLOOR2-02      access_point      warning       2
+SW-CORE-01        switch            online      145
+SW-CORE-02        switch            online      145
+SW-DIST-01        switch            online       89
+SW-DIST-02        switch            online       89
+SW-ACCESS-04      switch            online      234
+SW-ACCESS-05      switch            online       15
+RT-EDGE-01        router            online      234
+RT-EDGE-02        router            online      234
+AP-FLOOR1-01      access_point      online       67
+AP-FLOOR1-02      access_point      online       67
+AP-FLOOR2-01      access_point      online       12
+AP-FLOOR3-01      access_point      online      156
+FW-DMZ-01         firewall          online       89
 
-Datacenter
-  SW-DC-CORE-01  |  Status: online  |  Uptime: 789 dagar
-  SW-DC-CORE-02  |  Status: online  |  Uptime: 789 dagar
-  SW-DC-TOR-01  |  Status: online  |  Uptime: 234 dagar
-  SW-DC-TOR-02  |  Status: warning  |  Uptime: 5 dagar
-  SW-DC-TOR-03  |  Status: online  |  Uptime: 156 dagar
-  RT-DC-EDGE-01  |  Status: online  |  Uptime: 567 dagar
-  FW-DC-01  |  Status: online  |  Uptime: 445 dagar
-  FW-DC-02  |  Status: online  |  Uptime: 445 dagar
-  LB-DC-01  |  Status: online  |  Uptime: 234 dagar
-  LB-DC-02  |  Status: online  |  Uptime: 234 dagar
+Lager — 5 enheter (Online: 3, Offline: 1, Warning: 1, 60% online)
+---------------------------------------------------------------------------
+Hostname          Typ               Status    Uptime (dagar)
+-------------------------------------------------------
+AP-LAGER-02       access_point      offline       0
+RT-LAGER-01       router            warning       2
+SW-LAGER-01       switch            online      456
+SW-LAGER-02       switch            online       23
+AP-LAGER-01       access_point      online       67
 
-Säkerhetskopia
-  SW-DR-01  |  Status: online  |  Uptime: 890 dagar
-  RT-DR-01  |  Status: online  |  Uptime: 890 dagar
-  FW-DR-01  |  Status: online  |  Uptime: 345 dagar
+Kontor Malmö — 7 enheter (Online: 7, Offline: 0, Warning: 0, 100% online)
+---------------------------------------------------------------------------
+Hostname          Typ               Status    Uptime (dagar)
+-------------------------------------------------------
+SW-MAL-CORE-01    switch            online      367
+SW-MAL-ACC-01     switch            online       45
+SW-MAL-ACC-02     switch            online        8
+RT-MAL-01         router            online      178
+AP-MAL-01         access_point      online       90
+AP-MAL-02         access_point      online       90
+FW-MAL-01         firewall          online      234
+
+Datacenter — 10 enheter (Online: 9, Offline: 0, Warning: 1, 90% online)
+---------------------------------------------------------------------------
+Hostname          Typ               Status    Uptime (dagar)
+-------------------------------------------------------
+SW-DC-TOR-02      switch            warning       5
+SW-DC-CORE-01     switch            online      789
+SW-DC-CORE-02     switch            online      789
+SW-DC-TOR-01      switch            online      234
+SW-DC-TOR-03      switch            online      156
+RT-DC-EDGE-01     router            online      567
+FW-DC-01          firewall          online      445
+FW-DC-02          firewall          online      445
+LB-DC-01          load_balancer     online      234
+LB-DC-02          load_balancer     online      234
+
+Säkerhetskopia — 3 enheter (Online: 3, Offline: 0, Warning: 0, 100% online)
+---------------------------------------------------------------------------
+Hostname          Typ               Status    Uptime (dagar)
+-------------------------------------------------------
+SW-DR-01          switch            online      890
+RT-DR-01          router            online      890
+FW-DR-01          firewall          online      345
+
+Enheter med status OFFLINE
+--------------------------
+- SW-ACCESS-03 (Huvudkontor)
+- AP-LAGER-02 (Lager)
+
+Enheter med status WARNING
+--------------------------
+- AP-FLOOR2-02 (Huvudkontor)
+- RT-LAGER-01 (Lager)
+- SW-DC-TOR-02 (Datacenter)
+
+Enheter med mindre än 30 dagars uptime
+---------------------------------------------
+- SW-ACCESS-03    Huvudkontor   switch          0 dagar
+- AP-LAGER-02     Lager         access_point    0 dagar
+- AP-FLOOR2-02    Huvudkontor   access_point    2 dagar
+- RT-LAGER-01     Lager         router          2 dagar
+- SW-DC-TOR-02    Datacenter    switch          5 dagar
+- SW-MAL-ACC-02   Kontor Malmö  switch          8 dagar
+- AP-FLOOR2-01    Huvudkontor   access_point   12 dagar
+- SW-ACCESS-05    Huvudkontor   switch         15 dagar
+- SW-LAGER-02     Lager         switch         23 dagar
+
+Switchport-användning per switch
+--------------------------------
+Switch                 Plats                Anv./Tot.        %
+---------------------- ------------------ ------------- ------
+SW-DC-TOR-01           Datacenter             48/48     100.0%
+SW-MAL-ACC-02          Kontor Malmö           24/24     100.0%
+SW-DC-TOR-02           Datacenter             47/48      97.9%
+SW-DC-CORE-01          Datacenter             46/48      95.8%
+SW-DC-CORE-02          Datacenter             46/48      95.8%
+SW-ACCESS-05           Huvudkontor            23/24      95.8%
+SW-LAGER-02            Lager                  45/48      93.8%
+SW-DC-TOR-03           Datacenter             44/48      91.7%
+SW-DIST-02             Huvudkontor            22/24      91.7%
+SW-CORE-01             Huvudkontor            42/48      87.5%
+SW-MAL-ACC-01          Kontor Malmö           20/24      83.3%
+SW-CORE-02             Huvudkontor            38/48      79.2%
+SW-ACCESS-04           Huvudkontor            19/24      79.2%
+SW-DIST-01             Huvudkontor            18/24      75.0%
+SW-MAL-CORE-01         Kontor Malmö           35/48      72.9%
+SW-DR-01               Säkerhetskopia         12/28      42.9%
+SW-LAGER-01            Lager                  12/48      25.0%
+SW-ACCESS-03           Huvudkontor             0/24       0.0%
+
+Översikt per lokation (total/online/offline/warning)
+-----------------------------------------------------
+Lokation                Totalt  Online  Offline  Warning
+----------------------  ------  ------  -------  -------
+Datacenter                  10       9        0        1
+Huvudkontor                 15      13        1        1
+Kontor Malmö                 7       7        0        0
+Lager                        5       3        1        1
+Säkerhetskopia               3       3        0        0
