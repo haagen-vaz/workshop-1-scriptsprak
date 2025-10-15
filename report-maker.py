@@ -30,6 +30,8 @@ for location in data["locations"]:
     devices = location["devices"]
     # Sortera efter status (offline först, sedan warning, sedan online)
     devices.sort(key=lambda d: {"offline": 0, "warning": 1, "online": 2}.get(str(d.get("status", "")).lower(), 3))
+    city = location.get("city")
+    contact = location.get ("contact")
 
     
 
@@ -45,6 +47,7 @@ for location in data["locations"]:
     report += (
         f"\n{site_name} — {total_site} enheter "
         f"(Online: {site_online}, Offline: {site_offline}, Warning: {site_warning}, {online_pct:.0f}% online)\n"
+        f"{city}  |  Kontakt: {contact}\n"
     )
     report += "---------------------------------------------------------------------------\n"
     report += "Hostname".ljust(18) + "Typ".ljust(18) + "Status".ljust(10) + "Uptime (dagar)\n"

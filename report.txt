@@ -11,6 +11,7 @@ VLAN-lista: 10, 20, 30, 40, 50, 100, 110, 120, 200, 300, 400, 500, 600, 700, 800
 
 
 Huvudkontor — 15 enheter (Online: 13, Offline: 1, Warning: 1, 87% online)
+Stockholm  |  Kontakt: Anna Andersson
 ---------------------------------------------------------------------------
 Hostname          Typ               Status    Uptime (dagar)
 -------------------------------------------------------
@@ -31,6 +32,7 @@ AP-FLOOR3-01      access_point      online      156
 FW-DMZ-01         firewall          online       89
 
 Lager — 5 enheter (Online: 3, Offline: 1, Warning: 1, 60% online)
+Göteborg  |  Kontakt: Björn Björnsson
 ---------------------------------------------------------------------------
 Hostname          Typ               Status    Uptime (dagar)
 -------------------------------------------------------
@@ -41,6 +43,7 @@ SW-LAGER-02       switch            online       23
 AP-LAGER-01       access_point      online       67
 
 Kontor Malmö — 7 enheter (Online: 7, Offline: 0, Warning: 0, 100% online)
+Malmö  |  Kontakt: Cecilia Carlsson
 ---------------------------------------------------------------------------
 Hostname          Typ               Status    Uptime (dagar)
 -------------------------------------------------------
@@ -53,6 +56,7 @@ AP-MAL-02         access_point      online       90
 FW-MAL-01         firewall          online      234
 
 Datacenter — 10 enheter (Online: 9, Offline: 0, Warning: 1, 90% online)
+Stockholm  |  Kontakt: David Davidsson
 ---------------------------------------------------------------------------
 Hostname          Typ               Status    Uptime (dagar)
 -------------------------------------------------------
@@ -68,6 +72,7 @@ LB-DC-01          load_balancer     online      234
 LB-DC-02          load_balancer     online      234
 
 Säkerhetskopia — 3 enheter (Online: 3, Offline: 0, Warning: 0, 100% online)
+Umeå  |  Kontakt: Erik Eriksson
 ---------------------------------------------------------------------------
 Hostname          Typ               Status    Uptime (dagar)
 -------------------------------------------------------
