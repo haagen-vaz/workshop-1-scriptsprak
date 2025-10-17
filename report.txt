@@ -3,7 +3,7 @@ Rapport för: TechCorp AB
 Genererad: 2025-10-17
 Datakälla senast uppdaterad: 2024-09-30T10:30:00
 =================================================
-Unika VLAN: 19
+VLAN: 19
 Totalt antal enheter: 40
 Switchportar i bruk: 541/676 (80%)
 -------------------------------------------------
@@ -12,22 +12,28 @@ Switchportar i bruk: 541/676 (80%)
         EXECUTIVE SUMMARY     
 ==============================
 - Offline enheter: 2
-- Enheter med låg uptime (< 30 dagar): 9
+- Enheter med låg uptime (< 30 dagar): 7
 - Switchar med hög portanvändning (≥ 80%): 11
 
-⚠️  Offline (topp 3):
+⚠️  Offline:
  - SW-ACCESS-03 (Huvudkontor)
  - AP-LAGER-02 (Lager)
 
-⚠️  Låg uptime (topp 3):
- - SW-ACCESS-03 (Huvudkontor) – 0 dagar, switch
- - AP-LAGER-02 (Lager) – 0 dagar, access_point
- - AP-FLOOR2-02 (Huvudkontor) – 2 dagar, access_point
+⚠️  Låg uptime:
+Enhet               Plats             Typ            Uptime (d)
+------------------------------------------------------------------------
+AP-FLOOR2-02        Huvudkontor       access_point          2
+RT-LAGER-01         Lager             router                2
+SW-DC-TOR-02        Datacenter        switch                5
+SW-MAL-ACC-02       Kontor Malmö      switch                8
+AP-FLOOR2-01        Huvudkontor       access_point         12
 
-⚠️  Hög portanvändning (topp 3):
- - SW-MAL-ACC-02 (Kontor Malmö) – 24/24 portar (100%)
- - SW-DC-TOR-01 (Datacenter) – 48/48 portar (100%)
- - SW-DC-TOR-02 (Datacenter) – 47/48 portar (98%)
+⚠️  Hög portanvändning:
+Enhet               Plats             Portar               %
+-----------------------------------------------------------------
+SW-MAL-ACC-02       Kontor Malmö       24/24             100%
+SW-DC-TOR-01        Datacenter         48/48             100%
+SW-DC-TOR-02        Datacenter         47/48              98%
 
 
 Huvudkontor — 15 enheter (Online: 13, Offline: 1, Warning: 1, 87% online)
@@ -113,8 +119,6 @@ Enheter med status WARNING
 
 Enheter med mindre än 30 dagars uptime
 ---------------------------------------------
-- SW-ACCESS-03    Huvudkontor   switch          0 dagar
-- AP-LAGER-02     Lager         access_point    0 dagar
 - AP-FLOOR2-02    Huvudkontor   access_point    2 dagar
 - RT-LAGER-01     Lager         router          2 dagar
 - SW-DC-TOR-02    Datacenter    switch          5 dagar
@@ -137,7 +141,7 @@ Routrar – lägst total portkapacitet
 - RT-MAL-01            Kontor Malmö       1000 Mbps
 - RT-EDGE-01           Huvudkontor        2500 Mbps
 
-VLAN i användning (unika)
+VLAN i användning
 -------------------------
 10, 20, 30, 40, 50, 100, 110, 120, 200, 300, 400, 500, 600, 700, 800, 900, 1000, 2000, 2100
 
@@ -191,7 +195,7 @@ Säkerhetskopia               3       3        0        0
                 REKOMMENDATIONER                
 =================================================
 - Kontrollera anslutning och ström till 2 offline-enheter.
-- Överväg att uppgradera eller felsöka de 9 enheter med låg uptime (< 30 dagar).
+- Överväg att uppgradera eller felsöka de 7 enheter med låg uptime (< 30 dagar).
 - Öka kapaciteten eller fördela trafiken på switchar med över 80% portanvändning.
 - Granska 3 routerinterface som är nere eller avvikande.
 - Se till att VLAN-konfigurationen hålls uppdaterad och undvik oanvända VLAN.
