@@ -1,13 +1,13 @@
 Summary
 -----------------
 Företag: TechCorp AB
-Senast uppdaterad: 2024-09-30T10:30:00
+Senast uppdaterad: None
 Totalt antal enheter: 40
 Offline: 2  |  Warning: 3  |  Låg uptime (<30 d): 9
 Switch-portar: 541/676 i bruk (80%)
-Unika VLAN: 0
+Unika VLAN: 19
 
-VLAN-lista: 
+VLAN-lista: 10, 20, 30, 40, 50, 100, 110, 120, 200, 300, 400, 500, 600, 700, 800, 900, 1000, 2000, 2100
 
 
 Huvudkontor — 15 enheter (Online: 13, Offline: 1, Warning: 1, 87% online)
@@ -103,22 +103,19 @@ Enheter med mindre än 30 dagars uptime
 - SW-ACCESS-05    Huvudkontor   switch         15 dagar
 - SW-LAGER-02     Lager         switch         23 dagar
 
-WAN-kapacitet per plats (routrar)
----------------------------------
-- Huvudkontor            2500 Mbps (summa WAN up)
-
-Totalt WAN (alla platser): 2500 Mbps
-
 Routerinterface nere / avvikande
 --------------------------------
 - Huvudkontor      RT-EDGE-02           wan2       status: down
 - Lager            RT-LAGER-01          gi0/1      status: down
 - Säkerhetskopia   RT-DR-01             gi0/0/1    status: standby
 
-Routrar – högst WAN-kapacitet (topp 5)
---------------------------------------
-- RT-EDGE-01           Huvudkontor        1500 Mbps
+Routrar – lägst total portkapacitet (botten 5)
+----------------------------------------------
+- RT-LAGER-01          Lager               100 Mbps
+- RT-DR-01             Säkerhetskopia     1000 Mbps
 - RT-EDGE-02           Huvudkontor        1000 Mbps
+- RT-MAL-01            Kontor Malmö       1000 Mbps
+- RT-EDGE-01           Huvudkontor        2500 Mbps
 
 Switchport-användning per switch
 --------------------------------

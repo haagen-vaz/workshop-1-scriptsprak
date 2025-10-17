@@ -8,7 +8,7 @@ data = json.load(open("network.devices.json", "r", encoding="utf-8"))
 
 # Basfält
 company_name = data.get("company" )
-last_updated = data.get("generated_at") or data.get("last_updated")
+last_updated = data.get("generated_at")
 
 # Hjälpstrukturer
 
@@ -111,23 +111,26 @@ for location in data["locations"]:
         if dtype == "router":
             ifs = device.get("interfaces", []) or []
             wan_sum = 0
+
             for iface in ifs:
                 name = str(iface.get("name", ""))
                 st   = str(iface.get("status", "")).lower()
                 bw   = int(iface.get("bandwidth_mbps", 0))
-                # WAN-kapacitet: interface med "wan" i namnet och som är up/online
-                if "wan" in name.lower() and st in ("up", "online"):
-                    wan_sum += bw
-                if st not in ("up", "online"):
-                    router_if_down.append((hostname, site_name, name, st))
 
-            if wan_sum:
-                wan_capacity_by_site[site_name] += wan_sum
-                wan_capacity_by_router.append((wan_sum, hostname, site_name))
+                # Räkna kapacitet per PORT: lägg till alla portar som är up/online
+                if st in ("up", "online"):
+                     wan_sum += bw
+                else:
+            # logga allt som inte är up/online
+                     router_if_down.append((hostname, site_name, name, st))
+
+            # Lägg alltid till, även om 0
+            wan_capacity_by_router.append((wan_sum, hostname, site_name))
+
 
     # --- VLAN (oavsett typ) ---
-    for v in device.get("vlans", []):
-        vlan_set.add(int(v))
+        for v in device.get("vlans", []):
+            vlan_set.add(int(v))
 
 
 
@@ -159,15 +162,12 @@ if low_uptime_list:
     for uptime, hostname, site_name, dtype in low_uptime_list:
         report += f"- {hostname:<15} {site_name:<12}  {dtype:<12}  {int(uptime):>3} dagar\n"
         # --- WAN-kapacitet per plats (routrar) ---
-report += "\nWAN-kapacitet per plats (routrar)\n"
-report += "---------------------------------\n"
+
 if wan_capacity_by_site:
     total_wan = sum(wan_capacity_by_site.values())
     for s, cap in sorted(wan_capacity_by_site.items()):
         report += f"- {s:<20} {cap:>6} Mbps (summa WAN up)\n"
-    report += f"\nTotalt WAN (alla platser): {total_wan} Mbps\n"
-else:
-    report += "Ingen WAN-kapacitet hittades.\n"
+    
 
 # --- Routrar: interface nere / avvikande ---
 report += "\nRouterinterface nere / avvikande\n"
@@ -175,17 +175,24 @@ report += "--------------------------------\n"
 if router_if_down:
     for h, s, ifn, st in sorted(router_if_down, key=lambda x: (x[1], x[0], x[2])):
         report += f"- {s:<16} {h:<20} {ifn:<10} status: {st}\n"
-else:
-    report += "Inga.\n"
 
-# --- Routrar – högst WAN-kapacitet (topp 5) ---
-report += "\nRoutrar – högst WAN-kapacitet (topp 5)\n"
-report += "--------------------------------------\n"
+
+#Routrar – lägst total portkapacitet
+report += "\nRoutrar – lägst total portkapacitet\n"
+report += "----------------------------------------------\n"
 if wan_capacity_by_router:
-    for wan_sum, h, s in sorted(wan_capacity_by_router, reverse=True)[:5]:
+    # avdubbla på (router, site): behåll högsta summeringen om den råkat läggas in flera gånger
+    dedup = {}
+    for wan_sum, h, s in wan_capacity_by_router:
+        key = (h, s)
+        dedup[key] = max(dedup.get(key, -1), wan_sum)
+
+    rows = sorted([(v, h, s) for (h, s), v in dedup.items()])  # stigande -> lägst först
+    for wan_sum, h, s in rows[:5]:
         report += f"- {h:<20} {s:<16} {wan_sum:>6} Mbps\n"
 else:
-    report += "Inga routrar med WAN-up hittades.\n"
+    report += "Inga routrar hittades.\n"
+
 
 
 
