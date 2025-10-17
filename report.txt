@@ -1,13 +1,33 @@
-Summary
------------------
-Företag: TechCorp AB
-Senast uppdaterad: None
-Totalt antal enheter: 40
-Offline: 2  |  Warning: 3  |  Låg uptime (<30 d): 9
-Switch-portar: 541/676 i bruk (80%)
+=================================================
+Rapport för: TechCorp AB
+Genererad: 2025-10-17
+Datakälla senast uppdaterad: 2024-09-30T10:30:00
+=================================================
 Unika VLAN: 19
+Totalt antal enheter: 40
+Switchportar i bruk: 541/676 (80%)
+-------------------------------------------------
 
-VLAN-lista: 10, 20, 30, 40, 50, 100, 110, 120, 200, 300, 400, 500, 600, 700, 800, 900, 1000, 2000, 2100
+==============================
+        EXECUTIVE SUMMARY     
+==============================
+- Offline enheter: 2
+- Enheter med låg uptime (< 30 dagar): 9
+- Switchar med hög portanvändning (≥ 80%): 11
+
+⚠️  Offline (topp 3):
+ - SW-ACCESS-03 (Huvudkontor)
+ - AP-LAGER-02 (Lager)
+
+⚠️  Låg uptime (topp 3):
+ - SW-ACCESS-03 (Huvudkontor) – 0 dagar, switch
+ - AP-LAGER-02 (Lager) – 0 dagar, access_point
+ - AP-FLOOR2-02 (Huvudkontor) – 2 dagar, access_point
+
+⚠️  Hög portanvändning (topp 3):
+ - SW-MAL-ACC-02 (Kontor Malmö) – 24/24 portar (100%)
+ - SW-DC-TOR-01 (Datacenter) – 48/48 portar (100%)
+ - SW-DC-TOR-02 (Datacenter) – 47/48 portar (98%)
 
 
 Huvudkontor — 15 enheter (Online: 13, Offline: 1, Warning: 1, 87% online)
@@ -109,13 +129,30 @@ Routerinterface nere / avvikande
 - Lager            RT-LAGER-01          gi0/1      status: down
 - Säkerhetskopia   RT-DR-01             gi0/0/1    status: standby
 
-Routrar – lägst total portkapacitet (botten 5)
+Routrar – lägst total portkapacitet
 ----------------------------------------------
 - RT-LAGER-01          Lager               100 Mbps
 - RT-DR-01             Säkerhetskopia     1000 Mbps
 - RT-EDGE-02           Huvudkontor        1000 Mbps
 - RT-MAL-01            Kontor Malmö       1000 Mbps
 - RT-EDGE-01           Huvudkontor        2500 Mbps
+
+VLAN i användning (unika)
+-------------------------
+10, 20, 30, 40, 50, 100, 110, 120, 200, 300, 400, 500, 600, 700, 800, 900, 1000, 2000, 2100
+
+VLAN per plats
+--------------
+Datacenter:
+  100, 200, 300, 400, 500, 600, 700, 800, 900, 1000
+Huvudkontor:
+  10, 20, 30, 40, 50
+Kontor Malmö:
+  10, 20, 30, 110, 120
+Lager:
+  100, 200, 300
+Säkerhetskopia:
+  2000, 2100
 
 Switchport-användning per switch
 --------------------------------
@@ -149,3 +186,15 @@ Huvudkontor                 15      13        1        1
 Kontor Malmö                 7       7        0        0
 Lager                        5       3        1        1
 Säkerhetskopia               3       3        0        0
+
+=================================================
+                REKOMMENDATIONER                
+=================================================
+- Kontrollera anslutning och ström till 2 offline-enheter.
+- Överväg att uppgradera eller felsöka de 9 enheter med låg uptime (< 30 dagar).
+- Öka kapaciteten eller fördela trafiken på switchar med över 80% portanvändning.
+- Granska 3 routerinterface som är nere eller avvikande.
+- Se till att VLAN-konfigurationen hålls uppdaterad och undvik oanvända VLAN.
+- Granska varningsstatusar för att upptäcka mönster (t.ex. frekvent 'warning' på samma plats).
+-------------------------------------------------
+
